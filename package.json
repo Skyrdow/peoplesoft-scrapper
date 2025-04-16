@@ -1,0 +1,16 @@
+{
+  "name": "peoplesoft-scrapper",
+  "version": "1.0.0",
+  "description": "Scrapper para automatizar la extracción de datos personales",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "selenium-webdriver": "^4.31.0"
+  }
+}
