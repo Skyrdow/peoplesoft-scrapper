@@ -1,7 +1,8 @@
-import { Builder, By } from "selenium-webdriver";
+import { Builder, By, ThenableWebDriver, until } from "selenium-webdriver";
+import { Options } from "selenium-webdriver/chrome";
 import { writeFileSync } from "node:fs";
-import { config } from 'dotenv';
-import { Dato } from "./types";
+import { config } from "dotenv";
+import { Datos_personales } from "./types";
 
 config();
 
@@ -9,49 +10,112 @@ const url = process.env.url;
 const usuario = process.env.usuario;
 const password = process.env.password;
 
+async function fillFormAndSubmit(
+  formSelectors: {
+    inputFields: { selector: string; value: string }[];
+    submitButtonSelector: string;
+  },
+  driver: ThenableWebDriver,
+): Promise<void> {
+  // Llenar campos de entrada
+  for (const field of formSelectors.inputFields) {
+    const inputElement = await driver.findElement(By.css(field.selector));
+    await inputElement.clear();
+    await inputElement.sendKeys(field.value);
+  }
+
+  // Enviar formulario
+  const submitButton = await driver.findElement(
+    By.css(formSelectors.submitButtonSelector),
+  );
+  await submitButton.click();
+
+  // Esperar a que la página se cargue
+  await driver.wait(until.urlContains, 5000);
+}
+
+async function clickButtonAndWait(
+  buttonSelector: string,
+  waitSelector: string,
+  driver: ThenableWebDriver,
+): Promise<void> {
+  const button = await driver.findElement(By.css(buttonSelector));
+  await button.click();
+
+  // Esperar a que el elemento deseado esté presente
+  await driver.wait(until.elementLocated(By.css(waitSelector)), 5000);
+}
+
 async function obtenerDatos(url: string, usuario: string, password: string) {
   // Setup
-  const driver = new Builder().forBrowser("chrome").build();
+  const options = new Options();
+
+  // Coneccion a http
+  options.addArguments("--ignore-certificate-errors");
+  options.addArguments("--ignore-ssl-errors");
+  options.addArguments("--allow-insecure-localhost");
+  options.addArguments("--allow-running-insecure-content");
+  options.setAcceptInsecureCerts(true);
+
+  const driver = new Builder()
+    .forBrowser("chrome")
+    .setChromeOptions(options)
+    .build();
   driver.manage().window().maximize();
   await driver.get(url);
 
-  // console.log(await driver.getPageSource())
+  await driver.sleep(3000);
+  // Ingresar al login de peoplesoft
+  const rrhh = await driver.findElement(By.css(".ingreso_rrhh"));
 
-  const element = await driver.findElement(By.css(
-    ".text-secondary-content.md\\:text-5xl"
-  ))
+  await rrhh.click();
 
-  const text = await element.getText()
+  const handles = await driver.getAllWindowHandles();
 
-  console.log(text)
+  await driver.switchTo().window(handles[handles.length - 1]);
 
+  await driver.wait(until.urlContains, 5000);
+
+  // Login
+  // const user_input = await driver.findElement(By.id("userid"))
+  // await user_input.clear();
+  // await user_input.sendKeys(usuario)
+  // const password_input = await driver.findElement(By.id("pwd"))
+  // await password_input.clear();
+  // await password_input.sendKeys(password)
+
+  // await driver.findElement(By.name("Submit")).click();
+
+  console.log(await driver.getPageSource());
+
+  await driver.sleep(3000);
   await driver.quit();
-  // await driver.sleep(1);
-};
+}
 
 function guardarDatos() {
-  const datos: Dato[] = [{ rut: "1", nombre: "Lucas", fecha_nacimiento: "2/3/4" }];
+  const datos: Datos_personales[] = [];
 
   let contenidoCSV = "rut,nombre,fecha_nacimiento\n";
 
-  datos.forEach(dato => {
-    contenidoCSV += `${dato.rut},${dato.nombre},${dato.fecha_nacimiento}\n`;
+  datos.forEach((dato) => {
+    contenidoCSV += `${dato.rut},${dato.nombre_1},${dato.fecha_nacimiento}\n`;
   });
 
-  writeFileSync('datos.csv', contenidoCSV, 'utf8');
+  writeFileSync("datos.csv", contenidoCSV, "utf8");
 }
 
 function main() {
   if (!url) {
-    console.log("sin url")
-    process.exit(1)
-  } if (!usuario || !password) {
-    console.log("sin credenciales")
-    process.exit(1)
+    console.log("sin url");
+    process.exit(1);
+  }
+  if (!usuario || !password) {
+    console.log("sin credenciales");
+    process.exit(1);
   }
   obtenerDatos(url, usuario, password);
 
-  guardarDatos();
+  //guardarDatos();
 }
 
 main();
