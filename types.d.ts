@@ -1,6 +1,6 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    NODE_ENV: 'development' | 'production' | 'test';
+    NODE_ENV: "development" | "production" | "test";
     url: string;
     usuario: string;
     password: string;
@@ -22,7 +22,13 @@ export type Datos_personales = {
   comuna: string;
   numero: string;
   correo: string;
-}
+};
 export type Datos_contrato = {
-
-}
+  tipo: string;
+  estado: string;
+  inicio: string;
+  fin: string;
+  motivo: string;
+  facultad: string;
+  ubicacion: string;
+};

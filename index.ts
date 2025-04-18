@@ -1,8 +1,8 @@
 import { Builder, By, ThenableWebDriver, until } from "selenium-webdriver";
-import { Options } from "selenium-webdriver/chrome";
 import { writeFileSync } from "node:fs";
 import { config } from "dotenv";
-import { Datos_personales } from "./types";
+import { Datos_contrato, Datos_personales } from "./types";
+import { ids, xpaths } from "./xpaths";
 
 config();
 
@@ -47,24 +47,22 @@ async function clickButtonAndWait(
 }
 
 async function obtenerDatos(url: string, usuario: string, password: string) {
+  const datos_p: Datos_personales[] = [];
+  const datos_c: Datos_contrato[] = [];
   // Setup
-  const options = new Options();
 
   // Coneccion a http
-  options.addArguments("--ignore-certificate-errors");
-  options.addArguments("--ignore-ssl-errors");
-  options.addArguments("--allow-insecure-localhost");
-  options.addArguments("--allow-running-insecure-content");
-  options.setAcceptInsecureCerts(true);
+  // options.addArguments("--ignore-certificate-errors");
+  // options.addArguments("--ignore-ssl-errors");
+  // options.addArguments("--allow-insecure-localhost");
+  // options.addArguments("--allow-running-insecure-content");
+  // options.setAcceptInsecureCerts(true);
 
-  const driver = new Builder()
-    .forBrowser("chrome")
-    .setChromeOptions(options)
-    .build();
-  driver.manage().window().maximize();
+  const driver = new Builder().forBrowser("firefox").build();
+  // driver.manage().window().maximize();
   await driver.get(url);
 
-  await driver.sleep(3000);
+  await driver.sleep(500);
   // Ingresar al login de peoplesoft
   const rrhh = await driver.findElement(By.css(".ingreso_rrhh"));
 
@@ -74,22 +72,203 @@ async function obtenerDatos(url: string, usuario: string, password: string) {
 
   await driver.switchTo().window(handles[handles.length - 1]);
 
-  await driver.wait(until.urlContains, 5000);
+  await driver.sleep(700);
 
   // Login
-  // const user_input = await driver.findElement(By.id("userid"))
-  // await user_input.clear();
-  // await user_input.sendKeys(usuario)
-  // const password_input = await driver.findElement(By.id("pwd"))
-  // await password_input.clear();
-  // await password_input.sendKeys(password)
+  const user_input = await driver.findElement(By.id("userid"));
+  await user_input.clear();
+  await user_input.sendKeys(usuario);
+  const password_input = await driver.findElement(By.id("pwd"));
+  await password_input.clear();
+  await password_input.sendKeys(password);
 
-  // await driver.findElement(By.name("Submit")).click();
+  await driver.findElement(By.name("Submit")).click();
 
-  console.log(await driver.getPageSource());
+  await driver.sleep(700);
 
-  await driver.sleep(3000);
-  await driver.quit();
+  console.log("===================================");
+  console.log(await driver.getTitle());
+  console.log("===================================");
+
+  await driver.findElement(By.name("HC_WORKFORCE_ADMINISTRATION")).click();
+  await driver.sleep(1000);
+
+  console.log("===================================");
+  console.log(await driver.getTitle());
+  console.log("===================================");
+  // NAVEGAR LA SIDEBAR
+  var iframe = await driver.findElement(By.name("NAV"));
+  await driver.switchTo().frame(iframe);
+  await driver.sleep(700);
+
+  await driver.findElement(By.name("CO_PERSONAL_INFORMATION")).click();
+  await driver.wait(until.elementLocated(By.name("HC_PERSON_BIO")), 5000);
+
+  await driver.findElement(By.name("HC_PERSON_BIO")).click();
+  await driver.wait(until.elementLocated(By.name("HC_PERSONAL_DATA2")), 5000);
+
+  await driver.findElement(By.name("HC_PERSONAL_DATA2")).click();
+  await driver.sleep(700);
+
+  await driver.switchTo().defaultContent();
+
+  console.log("===================================");
+  console.log(await driver.getTitle());
+  console.log("===================================");
+  var iframe = await driver.findElement(By.name("TargetContent"));
+  await driver.switchTo().frame(iframe);
+  await driver.sleep(700);
+
+  console.log("===================================");
+  console.log(await driver.getTitle());
+  console.log("===================================");
+
+  const ruts = ["21266659-9", "21172165-7"];
+  for (let i = 0; i < ruts.length; i++) {
+    var rut = await driver.findElement(By.id("PERALL_SEC_SRCH_EMPLID"));
+
+    await rut.sendKeys();
+
+    await driver.findElement(By.id("#ICSearch")).click();
+    await driver.sleep(700);
+
+    const dato: Datos_personales = {
+      rut: "",
+      nombre_1: "",
+      nombre_2: "",
+      apellido_1: "",
+      apellido_2: "",
+      fecha_nacimiento: "",
+      lugar_nacimiento: "",
+      pais_nacimiento: "",
+      estado_civil: "",
+      direccion: "",
+      villa: "",
+      comuna: "",
+      numero: "",
+      correo: "",
+    };
+
+    const nombre_tabla = await driver
+      .findElement(By.xpath(xpaths.nombre))
+      .getText();
+    const split = nombre_tabla.split(" ");
+
+    if (split.length == 4) {
+      dato.nombre_1 = split[0];
+      dato.nombre_2 = split[1];
+      dato.apellido_1 = split[2];
+      dato.apellido_2 = split[3];
+    }
+    if (split.length == 3) {
+      dato.nombre_1 = split[0];
+      dato.apellido_1 = split[1];
+      dato.apellido_2 = split[2];
+    }
+
+    dato.fecha_nacimiento = await driver
+      .findElement(By.id(ids.fecha_nacimiento))
+      .getText();
+
+    dato.lugar_nacimiento = await driver
+      .findElement(By.id(ids.lugar_nacimiento))
+      .getText();
+
+    dato.pais_nacimiento = await driver
+      .findElement(By.id(ids.pais_nacimiento))
+      .getText();
+
+    dato.estado_civil = await driver
+      .findElement(By.id(ids.estado_civil))
+      .getText();
+
+    await driver.findElement(By.css("a.PSINACTIVETAB")).click();
+
+    const direccion_completa = await driver
+      .findElement(By.xpath(xpaths.direccion))
+      .getText();
+
+    const numero = await driver.findElement(By.id(ids.numero)).getText();
+    if (numero.length == 8) {
+      dato.numero = numero;
+    } else if (numero.length == 9) {
+      if (numero.includes(" ")) {
+        dato.numero = numero.split(" ").join("");
+      } else {
+        dato.numero = numero.substring(1);
+      }
+    }
+
+    const correo = await driver.findElement(By.id(ids.correo)).getText();
+    if (!correo.includes("usach.cl")) {
+      dato.correo = correo;
+    }
+
+    console.log(dato);
+    datos_p.push(dato);
+
+    await driver.findElement(By.id("#ICList")).click();
+    await driver.wait(
+      until.elementLocated(By.id("PERALL_SEC_SRCH_EMPLID")),
+      5000,
+    );
+  }
+  // NAVEGAR LA SIDEBAR
+  var iframe = await driver.findElement(By.name("NAV"));
+  await driver.switchTo().frame(iframe);
+  await driver.sleep(700);
+
+  await driver.findElement(By.name("CO_PERSONAL_INFORMATION")).click();
+  await driver.wait(until.elementLocated(By.name("HC_PERSON_BIO")), 5000);
+
+  await driver.findElement(By.name("HC_PERSONAL_DATA2")).click();
+  await driver.sleep(700);
+
+  await driver.switchTo().defaultContent();
+
+  console.log("===================================");
+  console.log(await driver.getTitle());
+  console.log("===================================");
+  var iframe = await driver.findElement(By.name("TargetContent"));
+  await driver.switchTo().frame(iframe);
+  await driver.sleep(700);
+
+  for (let i = 0; i < ruts.length; i++) {
+    var rut = await driver.findElement(By.id("PERALL_SEC_SRCH_EMPLID"));
+
+    await rut.sendKeys();
+
+    await driver.findElement(By.id("#ICSearch")).click();
+    await driver.sleep(700);
+
+    const dato: Datos_contrato = {
+      tipo: "",
+      estado: "",
+      inicio: "",
+      fin: "",
+      motivo: "",
+      facultad: "",
+      ubicacion: "",
+    };
+
+    dato.tipo = await driver.findElement(By.name("algo")).getText();
+    dato.estado = await driver.findElement(By.name("algo")).getText();
+    dato.inicio = await driver.findElement(By.name("algo")).getText();
+    dato.fin = await driver.findElement(By.name("algo")).getText();
+    dato.motivo = await driver.findElement(By.name("algo")).getText();
+    dato.facultad = await driver.findElement(By.name("algo")).getText();
+    dato.ubicacion = await driver.findElement(By.name("algo")).getText();
+
+    console.log(dato);
+    datos_c.push(dato);
+
+    await driver.findElement(By.id("#ICList")).click();
+    await driver.wait(
+      until.elementLocated(By.id("PERALL_SEC_SRCH_EMPLID")),
+      5000,
+    );
+  }
+  return { datos_p, datos_c };
 }
 
 function guardarDatos() {
@@ -104,7 +283,7 @@ function guardarDatos() {
   writeFileSync("datos.csv", contenidoCSV, "utf8");
 }
 
-function main() {
+async function main() {
   if (!url) {
     console.log("sin url");
     process.exit(1);
@@ -113,7 +292,7 @@ function main() {
     console.log("sin credenciales");
     process.exit(1);
   }
-  obtenerDatos(url, usuario, password);
+  await obtenerDatos(url, usuario, password);
 
   //guardarDatos();
 }

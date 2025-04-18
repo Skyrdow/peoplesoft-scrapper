@@ -1,0 +1,620 @@
+<!-- Copyright (c) 2000, 2007, Oracle. All rights reserved. --><!-- NETSCAPE/7.0/WINNT; ToolsRel=8.49.10; Page=PERSONAL_DATA1; Component=PERSONAL_DATA; Menu=DUPLICATE_HOLDER; User=JGARCIA; DB=HCM90PRD/ORACLE; AppServ=//158.170.10.38:9020; --><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="JavaScript">
+var  totalTimeoutMilliseconds = 14100000; 
+var  warningTimeoutMilliseconds = 14400000; 
+var timeOutURL = 'http://psofthcm90prd.usach.cl:8030/psp/hcm90prd/EMPLOYEE/HRMS/?cmd=expire';
+var timeoutWarningPageURL = 'http://psofthcm90prd.usach.cl:8030/psc/hcm90prd/EMPLOYEE/HRMS/s/WEBLIB_TIMEOUT.PT_TIMEOUTWARNING.FieldFormula.IScript_TIMEOUTWARNING';
+</script> 
+
+<link rel="stylesheet" type="text/css" href="/cs/hcm90prd/cache/PSSTYLEDEF_ESP_1.css">
+<title>Datos Personales</title>
+<script language="JavaScript">
+var baseKey_win0 = "\x1b";
+var altKey_win0 = "05678\xbc\xbe\xbf\xde12";
+var ctrlKey_win0 = "JK";
+var saveWarningKeys_win0 = "A2;";
+var bTabOverTB_win0 = false;
+var bTabOverPg_win0 = false;
+var bTabOverNonPS_win0 = false;
+var strCurrUrl='http://psofthcm90prd.usach.cl:8030/psp/hcm90prd/EMPLOYEE/HRMS/c/DUPLICATE_HOLDER.PERSONAL_DATA.GBL?EMPLID=21266659-9&PAGE=PERSONAL_DATA1';
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_SCRIPTNETSCAPE500_ESP_1.js">
+</script>
+<script language="JavaScript">
+try {
+document.domain = "usach.cl";
+}
+catch(err) {;}
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_PAGESCRIPT_ESP_win0_1.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_COPYURL_ESP_1.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_ISCROSSDOMAINNS6_ESP_1.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_SAVEWARNINGSCRIPT_ESP_1.js">
+</script>
+<script language="JavaScript">
+var nResubmit=0;
+setupTimeout();
+function submitAction_win0(form, name)
+{
+form.ICAction.value=name;
+form.ICXPos.value=getScrollX();
+form.ICYPos.value=getScrollY();
+processing_win0(1,3000);
+form.ICResubmit.value=nResubmit;
+form.submit();
+nResubmit++;
+}
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_CALENDARSCRIPT_ESP_win0_1.js">
+</script>
+<script language="javascript">
+function dateitemrefs()
+{
+this.pt_dateheader = "/cs/hcm90prd/cache/PT_DATE_HEADER_ESP_1.gif";
+this.pt_datering = "/cs/hcm90prd/cache/PT_CURRENT_DATE_ESP_1.gif";
+this.pt_datesel = "/cs/hcm90prd/cache/PT_SELECTED_DATE_ESP_1.gif";
+this.pt_nextmonth = "/cs/hcm90prd/cache/PT_RIGHT_SCROLL_ESP_1.gif";
+this.pt_prevmonth= "/cs/hcm90prd/cache/PT_LEFT_SCROLL_ESP_1.gif";
+this.pt_daystitle_hijri = "/cs/hcm90prd/cache/PT_DATE_TITLE_HIJRI_ESP_1.gif";
+this.pt_daystitle_s0 = "/cs/hcm90prd/cache/PT_DATE_TITLE_S0_ESP_1.GIF";
+this.pt_daystitle_m1 = "/cs/hcm90prd/cache/PT_DATE_TITLE_M1_ESP_1.GIF";
+this.pt_daystitle_t2 = "/cs/hcm90prd/cache/PT_DATE_TITLE_T2_ESP_1.GIF";
+this.pt_daystitle_w3 = "/cs/hcm90prd/cache/PT_DATE_TITLE_W3_ESP_1.GIF";
+this.pt_daystitle_t4 = "/cs/hcm90prd/cache/PT_DATE_TITLE_T4_ESP_1.GIF";
+this.pt_daystitle_f5 = "/cs/hcm90prd/cache/PT_DATE_TITLE_F5_ESP_1.GIF";
+this.pt_daystitle_s6 = "/cs/hcm90prd/cache/PT_DATE_TITLE_S6_ESP_1.GIF";
+}
+ 
+function LoadCalendar()
+{
+var dateitems = new dateitemrefs();
+loadImages(dateitems);
+}
+function DatePrompt_win0(dtfield,promptfield,yrfmt,bsubmit)
+{
+openDate(dtfield, promptfield, "DMY/"+yrfmt,bsubmit,"G",0);
+}
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_EDITSCRIPT_ESP_win0_1.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="/cs/hcm90prd/cache/PT_EDITSCRIPT2_ESP_win0_1.js">
+</script>
+</head>
+<body class="PSPAGE" onload="
+setFocus_win0('DERIVED_NM_LVL2_UPDATE_NAME_BTN$0',-1);
+setEventHandlers_win0('ICFirstAnchor_win0', 'ICLastAnchor_win0', false);
+LoadCalendar();
+processing_win0(0,3000);
+setKeyEventHandler_win0();
+nResubmit=0;
+">
+<div id="WAIT_win0" style="position: absolute; right: 0px; display: block; visibility: hidden;">
+<img align="right" src="/cs/hcm90prd/cache/PT_PROCESSING_ESP_1.gif" class="PSPROCESSING" alt="Procesando..." title="Procesando...">
+</div>
+<a name="ICFirstAnchor_win0"></a>
+<form name="win0" method="post" action="../../../EMPLOYEE/HRMS/c/DUPLICATE_HOLDER.PERSONAL_DATA.GBL" autocomplete="off">
+<input type="hidden" name="ICType" value="Panel">
+<input type="hidden" name="ICElementNum" value="0">
+<input type="hidden" name="ICStateNum" value="4">
+<input type="hidden" name="ICAction" value="None">
+<input type="hidden" name="ICXPos" value="0">
+<input type="hidden" name="ICYPos" value="0">
+<input type="hidden" name="ICFocus" value="">
+<input type="hidden" name="ICSaveWarningFilter" value="0">
+<input type="hidden" name="ICChanged" value="0">
+<input type="hidden" name="ICResubmit" value="0">
+<input type="hidden" name="ICSID" value="STyJVQmQkYLh">
+<input type="hidden" name="ICFind" value="">
+<div id="PAGEBAR"><table cols="3" width="100%" cellpadding="0" cellspacing="0" hspace="0" vspace="0">
+<tbody><tr>
+<td width="80%"></td><td width="10%" nowrap="nowrap" align="right"></td>
+<td width="10%" nowrap="nowrap" align="right"><a id="NEWWIN" name="NEWWIN" href="javascript:processing_win0(0,3000); void window.open('http://psofthcm90prd.usach.cl:8030/psp/hcm90prd_newwin/EMPLOYEE/HRMS/c/DUPLICATE_HOLDER.PERSONAL_DATA.GBL','','');" psaccesskey="9" tabindex="1" class="PSHYPERLINK">Nueva Ventana</a>&nbsp;|&nbsp;<a id="HELP" name="HELP" href="javascript:void window.open('http://people01.usach.cl:8030/PSOL/htmldoc/f1search.htm?ContextID=PERSONAL_DATA1&amp;LangCD=ESP','help','');" tabindex="2" class="PSHYPERLINK">Ayuda</a>&nbsp;|&nbsp;<a href="javascript:submitAction_win0(document.win0,'#ICCustPage');" id="CUSTPAGE" tabindex="3" class="PSHYPERLINK">Personalizar Página</a>&nbsp;|&nbsp;<a name="COPYURL" id="COPYURL" tabindex="4" href="Javascript:CopyUrlToClipboard();"><img src="/cs/hcm90prd/cache/PT_COPYURL_IMG_ESP_1.gif" border="0" hspace="0" vspace="0" align="absmiddle" alt="Haga clic para copiar la dirección completa de la página (URL) al portapapeles." title="Haga clic para copiar la dirección completa de la página (URL) al portapapeles."></a></td></tr>
+</tbody></table>
+<br>
+</div><table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><img class="PSNOIMAGE" src="/cs/hcm90prd/cache/PT_TAB1LAX_ESP_1.gif" alt=""></td>
+<td><img class="PSNOIMAGE" style="width:100%" src="/cs/hcm90prd/cache/PT_TAB1MAX_ESP_1.gif" width="100%" height="1" alt=""></td>
+<td><img class="PSNOIMAGE" src="/cs/hcm90prd/cache/PT_TAB1BAI_ESP_1.gif" alt=""></td>
+<td><img class="PSNOIMAGE" style="width:100%" src="/cs/hcm90prd/cache/PT_TAB1MIX_ESP_1.gif" width="100%" height="1" alt=""></td>
+<td><img class="PSNOIMAGE" src="/cs/hcm90prd/cache/PT_TAB1RIX_ESP_1.gif" alt=""></td>
+<td rowspan="2"></td>
+</tr>
+<tr>
+<td><img src="/cs/hcm90prd/cache/PT_TAB2LAXFFFFFF_ESP_1.gif" alt=""></td>
+<td nowrap="nowrap" align="center" class="PSACTIVETAB">&nbsp;&nbsp;Detalles Biográficos&nbsp;&nbsp;</td>
+<td><img src="/cs/hcm90prd/cache/PT_TAB2BAIDCC8A2FFFFFF_ESP_1.gif" alt=""></td>
+<td nowrap="nowrap" align="center" class="PSINACTIVETAB">&nbsp;&nbsp;<a name="tab1" tabindex="-1" class="PSINACTIVETAB" style="background-color:transparent" href="javascript: submitAction_win0(document.win0,'#ICPanel1');" accesskey="C">Datos de <u>C</u>ontacto</a>&nbsp;&nbsp;</td>
+<td><img src="/cs/hcm90prd/cache/PT_TAB2RIXDCC8A2_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td><img src="/cs/hcm90prd/cache/PT_TAB3LAXFFFFFF_ESP_1.gif" alt=""></td>
+<td class="PSACTIVETAB"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td><img src="/cs/hcm90prd/cache/PT_TAB3BAIDCC8A2FFFFFF_ESP_1.gif" alt=""></td>
+<td><img src="/cs/hcm90prd/cache/PT_TAB3MIXDCC8A2_ESP_1.gif" width="100%" height="2" alt=""></td>
+<td><img src="/cs/hcm90prd/cache/PT_TAB3RIXDCC8A2_ESP_1.gif" alt=""></td>
+<td><img class="PSBOTTOMLINE" src="/cs/hcm90prd/cache/PT_TAB_BOTTOM_LINE_ESP_1.GIF" width="373" alt="" style="width:373px; border-color: #ffffff"></td>
+</tr>
+</tbody></table>
+<table class="PSPAGECONTAINER"><tbody><tr><td>
+<table id="ACE_width" border="0" cellpadding="0" cellspacing="0" class="PSPAGECONTAINER" cols="7" width="771">
+<tbody><tr>
+<td width="4" height="8"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="4" height="1" alt=""></td>
+<td width="13"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="13" height="1" alt=""></td>
+<td width="361"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="361" height="1" alt=""></td>
+<td width="89"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="89" height="1" alt=""></td>
+<td width="38"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="38" height="1" alt=""></td>
+<td width="87"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="87" height="1" alt=""></td>
+<td width="179"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="179" height="1" alt=""></td>
+</tr>
+<tr>
+<td height="1" colspan="3"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" valign="top" align="right">
+<label for="PERSON_EMPLID" class="PSEDITBOXLABEL">ID Persona:</label>
+</td>
+<td colspan="3"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="22" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">Lucas Esteban Mesias Soza</span><!-- DERIVED_HR_NAME -->
+</td>
+<td><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">21266659-9</span><!-- PERSON_EMPLID -->
+</td>
+</tr>
+<tr>
+<td height="97"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="5" valign="top" align="left">
+<table cellpadding="0" cellspacing="0" cols="1" class="PSLEVEL2SCROLLAREABODYWBO" id="$ICField7$scrolli$0" width="587">
+<tbody><tr><td class="PSLEVEL2SCROLLAREAHEADER">
+<table border="0" cellpadding="0" cellspacing="0" cols="2" class="PSLEVEL2SCROLLAREAHEADER" style="border-style:none" width="583">
+<tbody><tr>
+<td align="left" width="13%" class="PSLEVEL2SCROLLAREAHEADER">Nombre</td>
+<td align="right" width="87%" class="PSLEVEL2SCROLLAREAHEADER"><a name="$ICField7$hfind$0" id="$ICField7$hfind$0" tabindex="20" onclick="return FindString_win0(document.win0.ICFind);" href="javascript:submitAction_win0(document.win0,'$ICField7$hfind$0');" class="PSLEVEL2SCROLLAREAHEADER">Buscar</a>&nbsp;|&nbsp;<span class="PSHEADERHYPERLINKD">Ver Todo</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PSHEADERHYPERLINKD">Primero</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_PREVIOUSROW_D_ESP_1.gif" name="$ICField7$hup$img$0" alt="Mostrar Fila Anterior (botón inactivo) (Alt+,)" title="Mostrar Fila Anterior (botón inactivo) (Alt+,)" border="0">&nbsp;<span class="PSGRIDCOUNTER">1 de 1</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_NEXTROW_D_ESP_1.gif" name="$ICField7$hdown$img$0" alt="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" title="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" border="0">&nbsp;<span class="PSHEADERHYPERLINKD">Último</span>&nbsp;</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr><td width="583">
+<table id="ACE_width" border="0" cellpadding="0" cellspacing="0" cols="6" width="583" class="PSLEVEL2SCROLLAREABODY" style="border-style:none">
+<tbody><tr>
+<td width="2" height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="2" height="1" alt=""></td>
+<td width="121"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="121" height="1" alt=""></td>
+<td width="211"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="211" height="1" alt=""></td>
+<td width="207"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="207" height="1" alt=""></td>
+<td width="20"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="20" height="1" alt=""></td>
+<td width="22"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="22" height="1" alt=""></td>
+</tr>
+<tr>
+<td height="4" colspan="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="3" nowrap="nowrap" valign="top" align="left">
+<a name="$ICField7$new$0$$0" id="$ICField7$new$0$$0" tabindex="34" href="javascript:submitAction_win0(document.win0,'$ICField7$new$0$$0');"><img src="/cs/hcm90prd/cache/PT_ADD_ESP_1.gif" name="$ICField7$new$0$$img$0" alt="Añadir Fila en Fila 1 (Alt+7)" title="Añadir Fila en Fila 1 (Alt+7)" border="0"></a>
+</td>
+<td rowspan="3" nowrap="nowrap" valign="top" align="left">
+<a name="$ICField7$delete$0$$0" id="$ICField7$delete$0$$0" tabindex="35" onclick="return DeleteCheck2_win0();" href="javascript:submitAction_win0(document.win0,'$ICField7$delete$0$$0');"><img src="/cs/hcm90prd/cache/PT_DELETE_ESP_1.gif" name="$ICField7$delete$0$$img$0" alt="Eliminar Fila 1 (Alt+8)" title="Eliminar Fila 1 (Alt+8)" border="0"></a>
+</td>
+</tr>
+<tr>
+<td height="1"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" valign="top" align="left">
+<label for="NAMES_EFFDT$0" class="PSEDITBOXLABEL">Fecha Efectiva:</label>
+</td>
+<td colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="23"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">01/03/2022</span><!-- NAMES_EFFDT$0 -->
+</td>
+</tr>
+<tr>
+<td height="24"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td valign="top" align="left">
+<label for="NAMES_COUNTRY_NM_FORMAT$0" class="PSDROPDOWNLABEL">Tipo Formato:</label>
+</td>
+<td colspan="4" rowspan="2" valign="top" align="left">
+<span class="PSDROPDOWNLIST_DISPONLY">Español</span><!-- NAMES_COUNTRY_NM_FORMAT$0 -->
+</td>
+</tr>
+<tr>
+<td height="1"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" valign="top" align="left">
+<label for="NAMES_NAME_DISPLAY$0" class="PSEDITBOXLABEL">Nombre Vislz:</label>
+</td>
+</tr>
+<tr>
+<td height="21"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">Lucas Esteban Mesias Soza</span><!-- NAMES_NAME_DISPLAY$0 -->
+</td>
+<td colspan="3" nowrap="nowrap" valign="top" align="left">
+<span class="PSHYPERLINK">
+<a name="DERIVED_NM_LVL2_UPDATE_NAME_BTN$0" id="DERIVED_NM_LVL2_UPDATE_NAME_BTN$0" tabindex="33" href="javascript:submitAction_win0(document.win0,'DERIVED_NM_LVL2_UPDATE_NAME_BTN$0');" class="PSHYPERLINK" title="Actualizar Campo Nombre">Ver Nombre</a></span><!-- DERIVED_NM_LVL2_UPDATE_NAME_BTN$0 -->
+</td>
+</tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td>
+<td rowspan="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="4" colspan="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="304"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="5" valign="top" align="left">
+<table cellpadding="0" cellspacing="0" cols="1" class="PSGROUPBOXWBO" width="587">
+<tbody><tr><td class="PSGROUPBOXLABEL" align="left">Información Personal</td></tr>
+<tr><td width="585">
+<table id="ACE_width" border="0" cellpadding="0" cellspacing="0" cols="11" width="585" class="PSGROUPBOX" style="border-style:none">
+<tbody><tr>
+<td width="3" height="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="3" height="1" alt=""></td>
+<td width="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="4" height="1" alt=""></td>
+<td width="112"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="112" height="1" alt=""></td>
+<td width="121"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="121" height="1" alt=""></td>
+<td width="31"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="31" height="1" alt=""></td>
+<td width="53"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="53" height="1" alt=""></td>
+<td width="23"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="23" height="1" alt=""></td>
+<td width="60"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="60" height="1" alt=""></td>
+<td width="88"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="88" height="1" alt=""></td>
+<td width="84"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="84" height="1" alt=""></td>
+<td width="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="6" height="1" alt=""></td>
+</tr>
+<tr>
+<td height="4" colspan="3"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="3" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERSON_BIRTHDATE" id="PERSON_BIRTHDATE" tabindex="49" value="29/03/2003" class="PSEDITBOX" style="width:71px; " maxlength="10" onkeyup="if (isPromptKey(event))DatePrompt_win0('PERSON_BIRTHDATE','PERSON_BIRTHDATE','450',false);return false;"><a name="PERSON_BIRTHDATE$prompt" id="PERSON_BIRTHDATE$prompt" tabindex="50" onfocus="doFocus_win0(this,true,false);" href="javascript:DatePrompt_win0('PERSON_BIRTHDATE','PERSON_BIRTHDATE$prompt','450',false);"><img src="/cs/hcm90prd/cache/PT_CALENDAR_ESP_1.gif" alt="Selección de Fecha (Alt+5)" title="Selección de Fecha (Alt+5)" name="PERSON_BIRTHDATE$prompt$img" border="0" align="absmiddle"></a>
+</td>
+<td colspan="5"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="5" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERSON_DT_OF_DEATH" id="PERSON_DT_OF_DEATH" tabindex="51" value="" class="PSEDITBOX" style="width:71px; " maxlength="10" onkeyup="if (isPromptKey(event))DatePrompt_win0('PERSON_DT_OF_DEATH','PERSON_DT_OF_DEATH','450',false);return false;"><a name="PERSON_DT_OF_DEATH$prompt" id="PERSON_DT_OF_DEATH$prompt" tabindex="52" onfocus="doFocus_win0(this,true,false);" href="javascript:DatePrompt_win0('PERSON_DT_OF_DEATH','PERSON_DT_OF_DEATH$prompt','450',false);"><img src="/cs/hcm90prd/cache/PT_CALENDAR_ESP_1.gif" alt="Selección de Fecha (Alt+5)" title="Selección de Fecha (Alt+5)" name="PERSON_DT_OF_DEATH$prompt$img" border="0" align="absmiddle"></a>
+</td>
+</tr>
+<tr>
+<td height="1"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="3" valign="top" align="left">
+<label for="PERSON_BIRTHDATE" class="PSEDITBOXLABEL">Fecha Nacimiento:</label>
+</td>
+<td><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="4" valign="top" align="left">
+<label for="DERIVED_HR_AGE_YEARS" class="PSEDITBOXLABEL">Años</label>
+</td>
+<td><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="4" valign="top" align="left">
+<label for="DERIVED_HR_AGE_MONTH" class="PSEDITBOXLABEL">Meses</label>
+</td>
+<td rowspan="4" valign="top" align="left">
+<label for="PERSON_DT_OF_DEATH" class="PSEDITBOXLABEL">F Defunción:</label>
+</td>
+</tr>
+<tr>
+<td height="19"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="3" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">22</span><!-- DERIVED_HR_AGE_YEARS -->
+</td>
+<td rowspan="3" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">0</span><!-- DERIVED_HR_AGE_MONTH -->
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="3" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERSON_BIRTHCOUNTRY" id="PERSON_BIRTHCOUNTRY" tabindex="53" value="CHL" class="PSEDITBOX" style="width:32px; " maxlength="3" onchange="oChange_win0=this;/*a400,200000*/"><a name="PERSON_BIRTHCOUNTRY$prompt" id="PERSON_BIRTHCOUNTRY$prompt" tabindex="54" href="javascript:submitAction_win0(document.win0,'PERSON_BIRTHCOUNTRY$prompt');"><img src="/cs/hcm90prd/cache/PT_PROMPT_LOOKUP_ESP_1.gif" alt="Consultar País Origen (Alt+5)" title="Consultar País Origen (Alt+5)" name="PERSON_BIRTHCOUNTRY$prompt$img" border="0" align="absmiddle"></a>
+</td>
+</tr>
+<tr>
+<td height="1"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="3" valign="top" align="left">
+<label for="PERSON_BIRTHCOUNTRY" class="PSEDITBOXLABEL">País Origen:</label>
+</td>
+</tr>
+<tr>
+<td height="19"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="7" rowspan="3" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">CHILE</span><!-- COUNTRY_TBL_DESCR -->
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="3" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERSON_BIRTHSTATE" id="PERSON_BIRTHSTATE" tabindex="55" value="RM" class="PSEDITBOX" style="width:79px; " maxlength="6" onchange="oChange_win0=this;/*2400,200000*/"><a name="PERSON_BIRTHSTATE$prompt" id="PERSON_BIRTHSTATE$prompt" tabindex="56" href="javascript:submitAction_win0(document.win0,'PERSON_BIRTHSTATE$prompt');"><img src="/cs/hcm90prd/cache/PT_PROMPT_LOOKUP_ESP_1.gif" alt="Consultar Región (Alt+5)" title="Consultar Región (Alt+5)" name="PERSON_BIRTHSTATE$prompt$img" border="0" align="absmiddle"></a>
+</td>
+</tr>
+<tr>
+<td height="1"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="3" valign="top" align="left">
+<label for="PERSON_BIRTHSTATE" class="PSEDITBOXLABEL">Región:</label>
+</td>
+</tr>
+<tr>
+<td height="19"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="7" valign="top" align="left">
+<span class="PSEDITBOX_DISPONLY">Metropolitana de Santiago</span><!-- BIRTHSTATE_VW_DESCR -->
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="5" rowspan="2" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERSON_BIRTHPLACE" id="PERSON_BIRTHPLACE" tabindex="57" value="Santiago" class="PSEDITBOX" style="width:221px; " maxlength="30">
+</td>
+<td colspan="3" rowspan="2" nowrap="nowrap" valign="top" align="left">
+<label for="DIVERSITY_WAIVE_DATA_PROTECT" class="PSCHECKBOX">Renuncia Protec Datos</label>
+<input type="hidden" name="DIVERSITY_WAIVE_DATA_PROTECT$chk" value="N">
+<input type="checkbox" name="DIVERSITY_WAIVE_DATA_PROTECT" id="DIVERSITY_WAIVE_DATA_PROTECT" tabindex="58" value="Y" onclick="this.form.DIVERSITY_WAIVE_DATA_PROTECT$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);">
+</td>
+</tr>
+<tr>
+<td height="23"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" valign="top" align="left">
+<label for="PERSON_BIRTHPLACE" class="PSEDITBOXLABEL">Lugar Nacimiento:</label>
+</td>
+</tr>
+<tr>
+<td height="180" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="8" valign="top" align="left">
+<table cellpadding="0" cellspacing="0" cols="1" class="PSLEVEL1SCROLLAREABODYWBO" id="$ICField71$scrolli$0" width="571">
+<tbody><tr><td class="PSLEVEL1SCROLLAREAHEADER">
+<table border="0" cellpadding="0" cellspacing="0" cols="2" class="PSLEVEL1SCROLLAREAHEADER" style="border-style:none" width="567">
+<tbody><tr>
+<td align="left" width="34%" class="PSLEVEL1SCROLLAREAHEADER">Historial Datos Personales</td>
+<td align="right" width="66%" class="PSLEVEL1SCROLLAREAHEADER"><a name="$ICField71$hfind$0" id="$ICField71$hfind$0" tabindex="60" onclick="return FindString_win0(document.win0.ICFind);" href="javascript:submitAction_win0(document.win0,'$ICField71$hfind$0');" class="PSLEVEL1SCROLLAREAHEADER">Buscar</a>&nbsp;|&nbsp;<span class="PSHEADERHYPERLINKD">Ver Todo</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PSHEADERHYPERLINKD">Primero</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_PREVIOUSROW_D_ESP_1.gif" name="$ICField71$hup$img$0" alt="Mostrar Fila Anterior (botón inactivo) (Alt+,)" title="Mostrar Fila Anterior (botón inactivo) (Alt+,)" border="0">&nbsp;<span class="PSGRIDCOUNTER">1 de 1</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_NEXTROW_D_ESP_1.gif" name="$ICField71$hdown$img$0" alt="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" title="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" border="0">&nbsp;<span class="PSHEADERHYPERLINKD">Último</span>&nbsp;</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr><td width="567">
+<table id="ACE_width" border="0" cellpadding="0" cellspacing="0" cols="9" width="567" class="PSLEVEL1SCROLLAREABODY" style="border-style:none">
+<tbody><tr>
+<td width="6" height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="6" height="1" alt=""></td>
+<td width="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="4" height="1" alt=""></td>
+<td width="164"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="164" height="1" alt=""></td>
+<td width="88"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="88" height="1" alt=""></td>
+<td width="140"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="140" height="1" alt=""></td>
+<td width="76"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="76" height="1" alt=""></td>
+<td width="47"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="47" height="1" alt=""></td>
+<td width="20"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="20" height="1" alt=""></td>
+<td width="22"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" width="22" height="1" alt=""></td>
+</tr>
+<tr>
+<td height="8" colspan="3"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="4" rowspan="2" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERS_DATA_EFFDT_EFFDT$0" id="PERS_DATA_EFFDT_EFFDT$0" tabindex="72" value="01/03/2022" class="PSEDITBOX" style="width:71px; " maxlength="10" onkeyup="if (isPromptKey(event))DatePrompt_win0('PERS_DATA_EFFDT_EFFDT$0','PERS_DATA_EFFDT_EFFDT$0','450',false);return false;"><a name="PERS_DATA_EFFDT_EFFDT$prompt$0" id="PERS_DATA_EFFDT_EFFDT$prompt$0" tabindex="73" onfocus="doFocus_win0(this,true,false);" href="javascript:DatePrompt_win0('PERS_DATA_EFFDT_EFFDT$0','PERS_DATA_EFFDT_EFFDT$prompt$0','450',false);"><img src="/cs/hcm90prd/cache/PT_CALENDAR_ESP_1.gif" alt="Selección de Fecha (Alt+5)" title="Selección de Fecha (Alt+5)" name="PERS_DATA_EFFDT_EFFDT$prompt$img$0" border="0" align="absmiddle"></a>
+</td>
+<td rowspan="2" nowrap="nowrap" valign="top" align="left">
+<a name="$ICField71$new$0$$0" id="$ICField71$new$0$$0" tabindex="82" href="javascript:submitAction_win0(document.win0,'$ICField71$new$0$$0');"><img src="/cs/hcm90prd/cache/PT_ADD_ESP_1.gif" name="$ICField71$new$0$$img$0" alt="Añadir Fila en Fila 1 (Alt+7)" title="Añadir Fila en Fila 1 (Alt+7)" border="0"></a>
+</td>
+<td rowspan="2" nowrap="nowrap" valign="top" align="left">
+<a name="$ICField71$delete$0$$0" id="$ICField71$delete$0$$0" tabindex="83" onclick="return DeleteCheck2_win0();" href="javascript:submitAction_win0(document.win0,'$ICField71$delete$0$$0');"><img src="/cs/hcm90prd/cache/PT_DELETE_ESP_1.gif" name="$ICField71$delete$0$$img$0" alt="Eliminar Fila 1 (Alt+8)" title="Eliminar Fila 1 (Alt+8)" border="0"></a>
+</td>
+</tr>
+<tr>
+<td height="16"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_EFFDT$0" class="PSEDITBOXLABEL">*Fecha Efectiva:</label>
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="6" rowspan="2" valign="top" align="left">
+<select name="PERS_DATA_EFFDT_SEX$0" id="PERS_DATA_EFFDT_SEX$0" tabindex="74" size="1" class="PSDROPDOWNLIST" style="width:88px; ">
+<option value="U">Desconocid</option>
+<option value="F">Femenino</option>
+<option value="M" selected="selected">Masculino</option>
+</select>
+</td>
+</tr>
+<tr>
+<td height="16"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_SEX$0" class="PSDROPDOWNLABEL">*Sexo:</label>
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="6" rowspan="2" valign="top" align="left">
+<select name="PERS_DATA_EFFDT_HIGHEST_EDUC_LVL$0" id="PERS_DATA_EFFDT_HIGHEST_EDUC_LVL$0" tabindex="75" size="1" class="PSDROPDOWNLIST" style="width:224px; ">
+<option value="04">Bachillerato</option>
+<option value="D">D - Algún Año Universidad</option>
+<option value="U" selected="selected">Desconocido</option>
+<option value="10">Diplomado</option>
+<option value="21">Doctorado</option>
+<option value="05">Educac Media Cientifica Humani</option>
+<option value="02">Educación Básica</option>
+<option value="06">Educación Media Técnico Profes</option>
+<option value="07">Educación Superior</option>
+<option value="09">Instituto Profesional</option>
+<option value="12">Licencia Laboral</option>
+<option value="13">Licenciado</option>
+<option value="18">Magíster</option>
+<option value="17">Master</option>
+<option value="NA">N.A</option>
+<option value="14">Postgrado</option>
+<option value="11">Titulo Universitario</option>
+<option value="08">Técnico Nivel Medio</option>
+<option value="15">Técnico Nivel Superior</option>
+</select>
+</td>
+</tr>
+<tr>
+<td height="20"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_HIGHEST_EDUC_LVL$0" class="PSDROPDOWNLABEL">*Último Nivel Estudios:</label>
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="2" valign="top" align="left">
+<select name="PERS_DATA_EFFDT_MAR_STATUS$0" id="PERS_DATA_EFFDT_MAR_STATUS$0" tabindex="76" size="1" class="PSDROPDOWNLIST" style="width:224px; ">
+<option value="M">Casado</option>
+<option value="U">Desconocido</option>
+<option value="D">Divorciado</option>
+<option value="S" selected="selected">Soltero</option>
+<option value="B">Unión Civil</option>
+<option value="G">Unión Civil Disuelta</option>
+<option value="W">Viudo</option>
+</select>
+</td>
+<td rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_MAR_STATUS_DT$0" class="PSEDITBOXLABEL">Fecha Ref:</label>
+</td>
+<td colspan="3" rowspan="2" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERS_DATA_EFFDT_MAR_STATUS_DT$0" id="PERS_DATA_EFFDT_MAR_STATUS_DT$0" tabindex="77" value="01/03/2022" class="PSEDITBOX" style="width:71px; " maxlength="10" onkeyup="if (isPromptKey(event))DatePrompt_win0('PERS_DATA_EFFDT_MAR_STATUS_DT$0','PERS_DATA_EFFDT_MAR_STATUS_DT$0','450',false);return false;"><a name="PERS_DATA_EFFDT_MAR_STATUS_DT$prompt$0" id="PERS_DATA_EFFDT_MAR_STATUS_DT$prompt$0" tabindex="78" onfocus="doFocus_win0(this,true,false);" href="javascript:DatePrompt_win0('PERS_DATA_EFFDT_MAR_STATUS_DT$0','PERS_DATA_EFFDT_MAR_STATUS_DT$prompt$0','450',false);"><img src="/cs/hcm90prd/cache/PT_CALENDAR_ESP_1.gif" alt="Selección de Fecha (Alt+5)" title="Selección de Fecha (Alt+5)" name="PERS_DATA_EFFDT_MAR_STATUS_DT$prompt$img$0" border="0" align="absmiddle"></a>
+</td>
+</tr>
+<tr>
+<td height="20"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="2" rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_MAR_STATUS$0" class="PSDROPDOWNLABEL">*Estado Civil:</label>
+</td>
+</tr>
+<tr>
+<td height="4"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="6" rowspan="2" valign="top" align="left">
+<select name="PERS_DATA_EFFDT_LANG_CD$0" id="PERS_DATA_EFFDT_LANG_CD$0" tabindex="79" size="1" class="PSDROPDOWNLIST" style="width:156px; ">
+<option value=""></option>
+<option value="GER">Alemán</option>
+<option value="ZHS">Chino Simplificado</option>
+<option value="ZHT">Chino Tradicional</option>
+<option value="KOR">Coreano</option>
+<option value="DAN">Danés</option>
+<option value="ESP" selected="selected">Español</option>
+<option value="FRA">Francés</option>
+<option value="CFR">Francés Canadá</option>
+<option value="GRK">Griego</option>
+<option value="ENG">Inglés</option>
+<option value="INE">Inglés Internacional</option>
+<option value="ITA">Italiano</option>
+<option value="JPN">Japonés</option>
+<option value="DUT">Neerlandés</option>
+<option value="POR">Portugués</option>
+<option value="SVE">Sueco</option>
+<option value="THA">Tailandés</option>
+</select>
+</td>
+</tr>
+<tr>
+<td height="20" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_LANG_CD$0" class="PSDROPDOWNLABEL">Código Idioma:</label>
+</td>
+</tr>
+<tr>
+<td height="8" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" nowrap="nowrap" valign="top" align="left">
+<input type="text" name="PERS_DATA_EFFDT_ALTER_EMPLID$0" id="PERS_DATA_EFFDT_ALTER_EMPLID$0" tabindex="80" value="" class="PSEDITBOX" style="width:88px; " maxlength="11">
+</td>
+<td colspan="5" rowspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="12" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td rowspan="2" valign="top" align="left">
+<label for="PERS_DATA_EFFDT_ALTER_EMPLID$0" class="PSEDITBOXLABEL">ID Alternativo:</label>
+</td>
+</tr>
+<tr>
+<td height="18" colspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="6" nowrap="nowrap" valign="top" align="left">
+<input type="hidden" name="PERS_DATA_EFFDT_FT_STUDENT$chk$0" value="N">
+<input type="checkbox" name="PERS_DATA_EFFDT_FT_STUDENT$0" id="PERS_DATA_EFFDT_FT_STUDENT$0" tabindex="81" value="Y" onclick="this.form.PERS_DATA_EFFDT_FT_STUDENT$chk$0.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);"><label for="PERS_DATA_EFFDT_FT_STUDENT$0" class="PSCHECKBOX">Estudiante Tiempo Cmpl</label>
+
+</td>
+</tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td>
+<td rowspan="2"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="3" colspan="10"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td height="4" colspan="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+<tr>
+<td height="64"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+<td colspan="5" valign="top" align="left">
+<table cellspacing="0" class="PSLEVEL1GRIDWBO" id="PERS_NID$scrolli$0" dir="ltr" cellpadding="0" cols="1" width="588">
+<tbody><tr><td class="PSLEVEL1GRIDLABEL">
+<table border="0" cellpadding="0" cellspacing="0" cols="2" class="PSLEVEL1GRIDLABEL" style="border-style:none" width="582">
+<tbody><tr>
+<td align="left" width="24%" class="PSLEVEL1GRIDLABEL"><a name="PERS_NID$expand$0" id="PERS_NID$expand$0" tabindex="97" href="javascript:submitAction_win0(document.win0,'PERS_NID$expand$0');"><img src="/cs/hcm90prd/cache/PT_COLLAPSE_ESP_1.gif" alt="Contraer Sección" title="Contraer Sección" name="PERS_NID$expand$img$0" border="0"></a>&nbsp;Documento Identidad</td>
+<td align="right" width="76%" class="PSLEVEL1GRIDLABEL"><a name="PERS_NID$hpers$0" id="PERS_NID$hpers$0" tabindex="98" href="javascript:submitAction_win0(document.win0,'PERS_NID$hpers$0');" class="PSLEVEL1GRIDLABEL">Personalizar</a>&nbsp;|&nbsp;<a name="PERS_NID$hfind$0" id="PERS_NID$hfind$0" tabindex="99" onclick="return FindString_win0(document.win0.ICFind);" href="javascript:submitAction_win0(document.win0,'PERS_NID$hfind$0');" class="PSLEVEL1GRIDLABEL">Buscar</a>&nbsp;|&nbsp;<span class="PSHEADERHYPERLINKD">Ver Todo</span>&nbsp;|&nbsp;<a name="PERS_NID$hexcel$0" id="PERS_NID$hexcel$0" tabindex="101" href="javascript:submitAction_win0(document.win0,'PERS_NID$hexcel$0');"><img src="/cs/hcm90prd/cache/PT_DOWNLOAD_ESP_1.gif" name="PERS_NID$hexcel$img$0" alt="Descargar" title="Descargar" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PSHEADERHYPERLINKD">Primero</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_PREVIOUSROW_D_ESP_1.gif" name="PERS_NID$hup$img$0" alt="Mostrar Fila Anterior (botón inactivo) (Alt+,)" title="Mostrar Fila Anterior (botón inactivo) (Alt+,)" border="0">&nbsp;<span class="PSGRIDCOUNTER">1 de 1</span>&nbsp;<img src="/cs/hcm90prd/cache/PT_NEXTROW_D_ESP_1.gif" name="PERS_NID$hdown$img$0" alt="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" title="Mostrar Siguiente Fila (botón inactivo) (Alt+.)" border="0">&nbsp;<span class="PSHEADERHYPERLINKD">Último</span>&nbsp;</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr><td>
+<table dir="ltr" border="0" cellpadding="2" cellspacing="0" cols="6" width="100%" class="PSLEVEL1GRID" style="border-style:none">
+<tbody><tr valign="center">
+<th scope="col" width="66" align="left" class="PSLEVEL1GRIDCOLUMNHDR"><a name="PERS_NID$srt0$0" tabindex="110" class="PSLEVEL1GRIDCOLUMNHDR" href="javascript:submitAction_win0(document.win0,'PERS_NID$srt0$0');" title="Haga clic en la cabecera de la columna para ordenar por orden ascendente">*País</a></th>
+<th scope="col" width="163" align="left" class="PSLEVEL1GRIDCOLUMNHDR"><a name="PERS_NID$srt2$0" tabindex="112" class="PSLEVEL1GRIDCOLUMNHDR" href="javascript:submitAction_win0(document.win0,'PERS_NID$srt2$0');" title="Haga clic en la cabecera de la columna para ordenar por orden ascendente">*Tipo Doc Identidad</a></th>
+<th scope="col" width="114" align="left" class="PSLEVEL1GRIDCOLUMNHDR"><a name="PERS_NID$srt3$0" tabindex="113" class="PSLEVEL1GRIDCOLUMNHDR" href="javascript:submitAction_win0(document.win0,'PERS_NID$srt3$0');" title="Haga clic en la cabecera de la columna para ordenar por orden ascendente">Doc ID</a></th>
+<th scope="col" width="70" align="CENTER" class="PSLEVEL1GRIDCOLUMNHDR"><a name="PERS_NID$srt6$0" tabindex="116" class="PSLEVEL1GRIDCOLUMNHDR" href="javascript:submitAction_win0(document.win0,'PERS_NID$srt6$0');" title="Haga clic en la cabecera de la columna para ordenar por orden ascendente">ID Principal</a></th>
+<th scope="col" class="PSLEVEL1GRIDCOLUMNHDR" width="20">&nbsp;</th>
+<th scope="col" class="PSLEVEL1GRIDCOLUMNHDR" width="20">&nbsp;</th>
+</tr>
+<tr valign="center">
+<td align="left" class="PSLEVEL1GRIDODDROW" nowrap="nowrap" height="22">
+<input type="text" name="PERS_NID_COUNTRY$0" id="PERS_NID_COUNTRY$0" tabindex="119" value="CHL" class="PSEDITBOX" style="width:48px; " maxlength="3" onchange="oChange_win0=this;/*ac00,200000*/"><a name="PERS_NID_COUNTRY$prompt$0" id="PERS_NID_COUNTRY$prompt$0" tabindex="120" href="javascript:submitAction_win0(document.win0,'PERS_NID_COUNTRY$prompt$0');"><img src="/cs/hcm90prd/cache/PT_PROMPT_LOOKUP_ESP_1.gif" alt="Consultar País (Alt+5)" title="Consultar País (Alt+5)" name="PERS_NID_COUNTRY$prompt$img$0" border="0" align="absmiddle"></a>
+</td>
+<td align="left" class="PSLEVEL1GRIDODDROW">
+<select name="PERS_NID_NATIONAL_ID_TYPE$0" id="PERS_NID_NATIONAL_ID_TYPE$0" tabindex="121" size="1" class="PSDROPDOWNLIST" style="width:163px; " onchange="submitAction_win0(this.form,this.name);/*8800,200000*/">
+<option value="RUT" selected="selected">RUT</option>
+</select>
+</td>
+<td align="left" class="PSLEVEL1GRIDODDROW">
+<span class="PSEDITBOX_DISPONLY">21266659-9</span><!-- DERIVED_HR_NID_SPECIAL_CHAR$0 -->
+</td>
+<td align="CENTER" class="PSLEVEL1GRIDODDROW" nowrap="nowrap">
+<input type="hidden" name="PERS_NID_PRIMARY_NID$chk$0" value="Y">
+<input type="checkbox" name="PERS_NID_PRIMARY_NID$0" id="PERS_NID_PRIMARY_NID$0" tabindex="123" value="Y" checked="checked" onclick="this.form.PERS_NID_PRIMARY_NID$chk$0.value=(this.checked?'Y':'N');submitAction_win0(this.form,this.name);/*8000,0*/">
+</td>
+<td align="center" class="PSLEVEL1GRIDODDROW"><a name="PERS_NID$new$0$$0" id="PERS_NID$new$0$$0" tabindex="124" href="javascript:submitAction_win0(document.win0,'PERS_NID$new$0$$0');"><img src="/cs/hcm90prd/cache/PT_ADD_ESP_1.gif" name="PERS_NID$new$0$$img$0" alt="Añadir Fila en Fila 1 (Alt+7)" title="Añadir Fila en Fila 1 (Alt+7)" border="0"></a></td>
+<td align="center" class="PSLEVEL1GRIDODDROW"><a name="PERS_NID$delete$0$$0" id="PERS_NID$delete$0$$0" tabindex="125" onclick="return DeleteCheck2_win0();" href="javascript:submitAction_win0(document.win0,'PERS_NID$delete$0$$0');"><img src="/cs/hcm90prd/cache/PT_DELETE_ESP_1.gif" name="PERS_NID$delete$0$$img$0" alt="Eliminar Fila 1 (Alt+8)" title="Eliminar Fila 1 (Alt+8)" border="0"></a></td>
+</tr>
+</tbody></table></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td height="7" colspan="6"><img src="/cs/hcm90prd/cache/PT_PIXEL_ESP_1.gif" alt=""></td>
+</tr>
+</tbody></table>
+<iframe name="CalFrame" id="CalFrame" style="position:absolute; left:0; top:0; height:0; width:0; display:block; visibility:hidden;" marginheight="0" marginwidth="0" noresize="noresize" frameborder="0" scrolling="no" src="/cs/hcm90prd/cache/PT_CALENDARPAGE_P_ESP_1.htm">Calendar not supported</iframe>
+</td></tr>
+<tr><td class="PSHEADERTOOLBARFRAME">
+<table width="100%"><tbody><tr>
+<td><input type="button" id="#ICSave" name="#ICSave" class="PSPUSHBUTTONTBSAVE" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_SAVE_ESP_1.gif);" value="Guardar" onclick="javascript:submitAction_win0(document.win0, '#ICSave');" tabindex="5000" psaccesskey="\" alt="Guardar (Alt+1)" title="Guardar (Alt+1)">
+<input type="button" id="#ICList" name="#ICList" class="PSPUSHBUTTONTBRETURN" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_RETURN_ESP_1.gif);" value="Volver a Buscar" onclick="if (saveWarning('',null,'_self','')) submitAction_win0(document.win0, '#ICList');" tabindex="5001" alt="Volver a Buscar (Alt+2)" title="Volver a Buscar (Alt+2)">
+<input type="button" id="#ICSendNotify" name="#ICSendNotify" class="PSPUSHBUTTONTBSENDNOTIFY" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_NOTIFY_ESP_1.gif);" value="Notificar" onclick="javascript:submitAction_win0(document.win0, '#ICSendNotify');" tabindex="5002" alt="Notificar" title="Notificar">
+<input type="button" id="#ICPrev" name="#ICPrev" disabled="" class="PSPUSHBUTTONTBPREVTAB" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_PREVTAB_D_ESP_1.gif);" value="Ficha Anterior" onclick="javascript:submitAction_win0(document.win0, '#ICPrev');" tabindex="5003" alt="Página Anterior de Componente (botón inactivo)" title="Página Anterior de Componente (botón inactivo)">
+<input type="button" id="#ICNext" name="#ICNext" class="PSPUSHBUTTONTBNEXTTAB" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_NEXTTAB_ESP_1.gif);" value="Ficha Siguiente" onclick="javascript:submitAction_win0(document.win0, '#ICNext');" tabindex="5004" alt="Siguiente Página de Componente" title="Siguiente Página de Componente">
+<input type="button" id="#ICRefresh" name="#ICRefresh" class="PSPUSHBUTTONTBREFRESH" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_REFRESH_ESP_1.gif);" value="Actualizar" onclick="javascript:submitAction_win0(document.win0, '#ICRefresh');" tabindex="5005" alt="Actualizar Página (Alt+0)" title="Actualizar Página (Alt+0)">
+</td>
+<td align="right"><input type="button" id="#ICUpdate" name="#ICUpdate" disabled="" class="PSPUSHBUTTONTBUPDATEMODE" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_UPDATEMODE_D_ESP_1.gif);" value="Actualizar/Visualizar" onclick="javascript:submitAction_win0(document.win0, '#ICUpdate');" tabindex="5006" alt="Actualizar (botón inactivo)" title="Actualizar (botón inactivo)">
+<input type="button" id="#ICUpdateAll" name="#ICUpdateAll" class="PSPUSHBUTTONTBUPDATEALLMODE" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_UPDATEALLMODE_ESP_1.gif);" value="Incluir Historial" onclick="if (saveWarning('',null,'_self','')) submitAction_win0(document.win0, '#ICUpdateAll');" tabindex="5007" alt="Modo Incluir Historial" title="Modo Incluir Historial">
+<input type="button" id="#ICCorrection" name="#ICCorrection" class="PSPUSHBUTTONTBCORRECTMODE" style="background-image: url(/cs/hcm90prd/cache/PT_TOOLBAR_CORRECTMODE_ESP_1.gif);" value="Corregir Historial" onclick="if (saveWarning('',null,'_self','')) submitAction_win0(document.win0, '#ICCorrection');" tabindex="5008" alt="Modo Corrección" title="Modo Corrección">
+</td>
+</tr></tbody></table>
+</td></tr>
+</tbody></table>
+<table><tbody><tr><td nowrap="nowrap" class="PSHYPERLINK">
+Detalles Biográficos | 
+<a name="#ICPanel1" class="PSHYPERLINK" href="javascript: submitAction_win0(document.win0,'#ICPanel1');" tabindex="10000">Datos de Contacto</a>
+</td></tr></tbody></table>
+<div id="DetachDiv" height="0" width="0" frameborder="0"></div>
+</form>
+<a name="ICLastAnchor_win0"></a>
+
+
+</body>

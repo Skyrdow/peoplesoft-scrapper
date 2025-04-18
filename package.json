@@ -1,7 +1,7 @@
 {
-  "name": "mi-proyecto-ts",
+  "name": "peoplesoft-scrapper",
   "version": "1.0.0",
-  "description": "Proyecto TypeScript básico",
+  "description": "Scrapper de datos para uso interno usach",
   "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
