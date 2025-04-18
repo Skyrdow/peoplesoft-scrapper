@@ -23,6 +23,7 @@ export type Datos_personales = {
   numero: string;
   correo: string;
 };
+
 export type Datos_contrato = {
   tipo: string;
   estado: string;

@@ -271,15 +271,42 @@ async function obtenerDatos(url: string, usuario: string, password: string) {
   return { datos_p, datos_c };
 }
 
-function guardarDatos() {
-  const datos: Datos_personales[] = [];
-
+function guardarDatos({
+  datos_p,
+  datos_c,
+}: {
+  datos_p: Datos_personales[];
+  datos_c: Datos_contrato[];
+}) {
   let contenidoCSV = "rut,nombre,fecha_nacimiento\n";
 
-  datos.forEach((dato) => {
-    contenidoCSV += `${dato.rut},${dato.nombre_1},${dato.fecha_nacimiento}\n`;
-  });
-
+  for (let i = 0; i < datos_p.length; i++) {
+    const dato_p = datos_p[i];
+    const dato_c = datos_c[i];
+    contenidoCSV +=
+      `${dato_p.rut},` +
+      `${dato_p.nombre_1},` +
+      `${dato_p.nombre_2},` +
+      `${dato_p.apellido_1},` +
+      `${dato_p.apellido_2},` +
+      `${dato_p.fecha_nacimiento},` +
+      `${dato_p.lugar_nacimiento},` +
+      `${dato_p.pais_nacimiento},` +
+      `${dato_p.estado_civil},` +
+      `${dato_p.direccion},` +
+      `${dato_p.villa},` +
+      `${dato_p.comuna},` +
+      `${dato_p.numero},` +
+      `${dato_p.correo},` +
+      `${dato_p.correo},` +
+      `${dato_c.tipo},` +
+      `${dato_c.estado},` +
+      `${dato_c.inicio},` +
+      `${dato_c.fin},` +
+      `${dato_c.motivo},` +
+      `${dato_c.facultad},` +
+      `${dato_c.ubicacion}\n`;
+  }
   writeFileSync("datos.csv", contenidoCSV, "utf8");
 }
 
@@ -292,9 +319,9 @@ async function main() {
     console.log("sin credenciales");
     process.exit(1);
   }
-  await obtenerDatos(url, usuario, password);
+  const datos = await obtenerDatos(url, usuario, password);
 
-  //guardarDatos();
+  guardarDatos(datos);
 }
 
 main();
